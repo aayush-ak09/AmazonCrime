@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.navbar-logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the navbar-links to grow and occupy the remaining space */
+}
+
+
+.navbar button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #555;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 731px; /* Maintain 16:9 aspect ratio for 1300px width */
+    border: none;
+    border-radius: 10px;
+}
+
+.video-title {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.additional-content {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.additional-content p {
+    margin: 0;
+}
+
+.control-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #555;
+}
+
+.video-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.prev-btn {
+    margin-right: 10px;
+}
+.card-list {
+    /* Remove flexbox properties */
+}
+
+.card {
+    display: block; /* Display cards as block elements */
+    width: auto; /* Adjust width as needed */
+    margin: 10px auto; /* Center the cards */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure images don't overflow */
+}
+
+.card-image {
+    float: left; /* Float image to the left */
+    width: 150px; /* Adjust image width as needed */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-details {
+    padding: 20px;
+    overflow: hidden; /* Clear floats */
+}
+
+.card-details h3 {
+    margin-top: 0;
+}
+
+.card-details p {
+    margin: 0px 0;
+}
+.dateduration{
+    color: #555;
+    margin-top: 1px;
+}
