@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Crime</title>
+    <link rel="stylesheet" href="public/css/homepage.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="navbar-logo">
+        <div class="navbar-links">
+            <a href="video_player.html"><button>My Shows</button></a>
+            <a href="#"><button>Movies</button></a>
+            <a href="#"><button>Series</button></a>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="images/slibe poster.jpg" alt="Slide 1">
+            <img class="slide" src="images/posterflex.jpg" alt="Slide 2">
+            <img class="slide" src="images/slibe poster.jpg" alt="Slide 3">
+            <img class="slide" src="images/posterflex.jpg" alt="Slide 4">
+            <img class="slide" src="images/slibe poster.jpg" alt="Slide 5">
+        </div>
+        <div class="navigation">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+    <!------slider end ---->
+
+    <!----cards --->
+    <div class="cards">
+        <div class="card">
+            <img src="images/card.jpg" alt="Movie 1">
+            <h3>Panchayat Season 3</h3>
+            <p>The third season of “Panchayat” opens up a new chapter, delving into the intricate politics and bureaucracy at the village level. The series portrays the transfer of Sachiv Ji, setting the stage for a story rich in themes of grief, community support, and unity.</p>
+            <a href="players/Panchayat-S3-E1.html"><button>Watch Now</button></a>
+        </div>
+        <div class="card">
+            <img src="images/card.jpg" alt="Movie 1">
+            <h3>Panchayat Season 2</h3>
+            <p>The second season of “Panchayat” opens up a new chapter, delving into the intricate politics and bureaucracy at the village level. The series portrays the transfer of Sachiv Ji, setting the stage for a story rich in themes of grief, community support, and unity.</p>
+            <a href="vp.html"><button>Watch Now</button></a>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function nextSlide() {
+            showSlides(slideIndex += 1);
+        }
+
+        function prevSlide() {
+            showSlides(slideIndex -= 1);
+        }
+
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>
